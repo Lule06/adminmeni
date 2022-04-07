@@ -88,19 +88,6 @@ function OtvoriAdminMeni()
   )
 end
 
---[[
-RegisterNetEvent("luli:admin")
-AddEventHandler("luli:admin", function()
-  ESX.TriggerServerCallback("lukex_core:proveriRank:fetchUserRank", function(playerRank)
-    if playerRank == "mod" or playerRank == "admin" or playerRank == "superadmin" then
-      OtvoriAdminMeni()
-	  admin_notifikacije('~r~Otvorio Si Admin Meni')
-    else
-      karakterNotifikacija('~r~Admin Meni', '~w~Pristup odbijen', 'Nemate dozvolu!.')
-    end
-  end)
-end)--]]
-
 RegisterKeyMapping('adminmeni', 'Ukljuci Admin Meni', 'keyboard', 'HOME')
 RegisterCommand('adminmeni', function()
   ESX.TriggerServerCallback("lukex_core:proveriRank:fetchUserRank", function(playerRank)
