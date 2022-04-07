@@ -5,7 +5,6 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 ESX.RegisterServerCallback("lukex_core:proveriRank", function(source, cb)
     local player = ESX.GetPlayerFromId(source)
     local xPlayer = ESX.GetPlayerFromId(source)
-	if (xPlayer.getGroup() == 'mod' or xPlayer.getGroup() == 'admin' or xPlayer.getGroup() == 'superadmin') then
     if player ~= nil then
         local playerGroup = player.getGroup()
 
@@ -17,7 +16,6 @@ ESX.RegisterServerCallback("lukex_core:proveriRank", function(source, cb)
     else
         cb("user")
     end
-end
 end)
 
 RegisterServerEvent('adminsistem:logovi')
